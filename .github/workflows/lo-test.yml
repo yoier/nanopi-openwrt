@@ -212,6 +212,7 @@ jobs:
 
   generate_slim_firmware:
     needs: build_packages
+    if: always()
     name: Generate ${{ github.event.client_payload.device || github.event.inputs.device }} slim firmware
     runs-on: ubuntu-latest
     env:
