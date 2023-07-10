@@ -259,7 +259,7 @@ jobs:
 
   generate_firmware:
     needs: build_packages
-    if: always()
+    #if: always()
     name: Generate ${{ github.event.client_payload.device || github.event.inputs.device }} firmware
     runs-on: ubuntu-latest
     env:
